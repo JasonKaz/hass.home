@@ -4,6 +4,12 @@ default_config:
 
 lovelace:
   mode: yaml
+  dashboards:
+    stack-monitoring:
+      title: Stack Monitoring
+      show_in_sidebar: true
+      mode: yaml
+      filename: dashboards/stack-monitor.yaml
 
 shopping_list:
 
