@@ -1,6 +1,12 @@
-
-# Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+frontend:
+shopping_list:
+updater:
+sun:
+history:
+logbook:
+config:
+system_health:
+zeroconf:
 
 lovelace:
   mode: yaml
@@ -10,8 +16,6 @@ lovelace:
       show_in_sidebar: true
       mode: yaml
       filename: dashboards/stack-monitor.yaml
-
-shopping_list:
 
 homeassistant:
   name: Home
