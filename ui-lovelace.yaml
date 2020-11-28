@@ -1,0 +1,22 @@
+title: Home!
+views:
+  - title: Home
+    path: home
+    badges:
+      - entity: binary_sensor.updater
+      - entity: sun.sun
+    cards:
+      - type: weather-forecast
+        entity: weather.home
+        show_forecast: true
+      - title: Living Room
+        type: entities
+        entities: 
+          - light.white_lamp
+          - light.hue_color_lamp_1
+          - switch.xmas_lights
+          - switch.xmas_tree
+      - title: Office
+        type: entities
+        entities:
+          - light.small_lamp

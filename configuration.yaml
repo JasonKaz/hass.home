@@ -1,0 +1,32 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+lovelace:
+  mode: yaml
+
+shopping_list:
+
+homeassistant:
+  name: Home
+  unit_system: imperial
+  temperature_unit: F
+  time_zone: !secret timezone
+  internal_url: !secret internal_url
+  
+hue:
+  bridges:
+    - host: 192.168.0.197
+      allow_unreachable: true
+      allow_hue_groups: true
+
+wemo:
+  discovery: true
+  static:
+    - 192.168.0.173
+    - 192.168.0.241
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
