@@ -18,3 +18,5 @@ views:
           - sensor.speedtest_download
           - sensor.speedtest_upload
           - sensor.speedtest_ping
+      - type: iframe
+        url: http://localhost:3000/d-solo/Yh-znFAGk/hardware-monitor?orgId=1&refresh=5s&panelId=10
