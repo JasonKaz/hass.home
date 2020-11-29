@@ -1,7 +1,7 @@
-title: Stack Monitoring
+title: Monitoring
 views:
-  - title: Host Hardware
-    path: host-hardware
+  - title: Host Monitoring
+    path: host-monitoring
     cards:
       - type: iframe
         url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=4&refresh=5s
@@ -9,3 +9,12 @@ views:
         url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=6&refresh=5s
       - type: iframe
         url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=8&refresh=5s
+  - title: Network Data
+    path: network
+    cards:
+      - title: DL
+        type: entities
+        entities:
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
+          - sensor.speedtest_ping

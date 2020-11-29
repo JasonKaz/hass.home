@@ -7,12 +7,15 @@ logbook:
 config:
 system_health:
 zeroconf:
+speedtestdotnet:
+   scan_interval: '00:15'
 
 lovelace:
   mode: yaml
   dashboards:
     stack-monitoring:
-      title: Stack Monitoring
+      title: Monitoring
+      icon: mdi:chart-bar-stacked
       show_in_sidebar: true
       mode: yaml
       filename: dashboards/stack-monitor.yaml
