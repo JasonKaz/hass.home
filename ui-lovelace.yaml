@@ -20,3 +20,8 @@ views:
         type: entities
         entities:
           - light.small_lamp
+      - title: Actions
+        type: button
+        entity: script.script_1
+        name: Bedtime
+        icon: mdi:sleep

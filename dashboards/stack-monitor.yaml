@@ -4,11 +4,11 @@ views:
     path: host-monitoring
     cards:
       - type: iframe
-        url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=4&refresh=5s
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=4&refresh=5s
       - type: iframe
-        url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=6&refresh=5s
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=6&refresh=5s
       - type: iframe
-        url: http://localhost:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=8&refresh=5s
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/Yh-znFAGk/new-dashboard-copy?orgId=1&panelId=8&refresh=5s
   - title: Network Data
     path: network
     cards:
@@ -19,4 +19,4 @@ views:
           - sensor.speedtest_upload
           - sensor.speedtest_ping
       - type: iframe
-        url: http://localhost:3000/d-solo/Yh-znFAGk/hardware-monitor?orgId=1&refresh=5s&panelId=10
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/Yh-znFAGk/hardware-monitor?orgId=1&refresh=5s&panelId=10

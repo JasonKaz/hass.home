@@ -1,0 +1,20 @@
+script_1:
+  alias: Bedtime
+  sequence:
+  - type: turn_off
+    device_id: 707956b1edb51d3598cb333bed2ca308
+    entity_id: light.small_lamp
+    domain: light
+  - type: turn_off
+    device_id: 91daf010f807c3a44d72ee9cff1cc80b
+    entity_id: switch.xmas_tree
+    domain: switch
+  - type: turn_off
+    device_id: c17e000a44e419ae49e7d7a4edab3458
+    entity_id: switch.xmas_lights
+    domain: switch
+  - type: turn_off
+    device_id: d2b5408d1062516d36e34d9140e2216f
+    entity_id: light.hue_color_lamp_1
+    domain: light
+  mode: single
