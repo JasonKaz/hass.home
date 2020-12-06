@@ -7,8 +7,8 @@ logbook:
 config:
 system_health:
 zeroconf:
-speedtestdotnet:
-   scan_interval: '00:15'
+        #speedtestdotnet:
+        #   scan_interval: '00:15'
 
 lovelace:
   mode: yaml
