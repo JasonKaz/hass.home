@@ -1,1 +1,74 @@
-[]
+- id: '1607216181505'
+  alias: Motion from stairs turns on xmas lights
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 70f43937f458d9d09fa8f17235cd17d1
+    entity_id: binary_sensor.hue_motion_sensor_1_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
+  condition:
+  - condition: time
+    after: '16:00'
+    before: '5:00'
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: switch.xmas_lights
+      state: 'off'
+  action:
+  - type: turn_on
+    device_id: c17e000a44e419ae49e7d7a4edab3458
+    entity_id: switch.xmas_lights
+    domain: switch
+  mode: single
+- id: '1607216364655'
+  alias: Auto turn off all
+  description: ''
+  trigger:
+  - platform: time
+    at: 02:00
+  condition: []
+  action:
+  - type: turn_off
+    device_id: 91daf010f807c3a44d72ee9cff1cc80b
+    entity_id: switch.xmas_tree
+    domain: switch
+  - type: turn_off
+    device_id: c17e000a44e419ae49e7d7a4edab3458
+    entity_id: switch.xmas_lights
+    domain: switch
+  - type: turn_off
+    device_id: 4a2cf561d7e039a3ddffa3514a3e2c2b
+    entity_id: light.white_lamp
+    domain: light
+  - type: turn_off
+    device_id: 707956b1edb51d3598cb333bed2ca308
+    entity_id: light.small_lamp
+    domain: light
+  mode: single
+- id: '1607217218024'
+  alias: No motion on stairs turns off lights if late
+  description: ''
+  trigger:
+  - type: no_motion
+    platform: device
+    device_id: 70f43937f458d9d09fa8f17235cd17d1
+    entity_id: binary_sensor.hue_motion_sensor_1_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+  condition:
+  - condition: time
+    after: '23:59'
+    before: '6:00'
+  action:
+  - service: script.script_1
+    data: {}
+  mode: single

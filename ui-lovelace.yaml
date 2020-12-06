@@ -13,9 +13,16 @@ views:
         type: entities
         entities: 
           - light.white_lamp
-          - light.hue_color_lamp_1
-          - switch.xmas_lights
-          - switch.xmas_tree
+          - entity: light.hue_color_lamp_1
+            name: Large Lamp
+          - entity: switch.xmas_lights
+            icon: mdi:string-lights
+          - entity: switch.xmas_tree
+            icon: mdi:pine-tree
+          - entity: binary_sensor.hue_motion_sensor_1_motion
+            name: Stairs Motion
+          - entity: sensor.hue_motion_sensor_1_temperature
+            name: Staits Temp
       - title: Office
         type: entities
         entities:
