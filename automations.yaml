@@ -1,6 +1,6 @@
 - id: '1607216181505'
-  alias: Motion from stairs turns on xmas lights
-  description: ''
+  alias: Upstairs motion turns on lights
+  description: From the stairs OR the living room sensor
   trigger:
   - type: motion
     platform: device
@@ -11,19 +11,27 @@
       hours: 0
       minutes: 0
       seconds: 1
+  - type: motion
+    platform: device
+    device_id: 361652f3b2369e4cdd6ba6b223801aec
+    entity_id: binary_sensor.hue_motion_sensor_2_motion
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 1
   condition:
-  - condition: time
-    after: '16:00'
-    before: '5:00'
-  - condition: and
-    conditions:
-    - condition: state
-      entity_id: switch.xmas_lights
-      state: 'off'
+    condition: numeric_state
+    entity_id: sensor.hue_motion_sensor_2_light_level
+    below: 70
   action:
   - type: turn_on
     device_id: c17e000a44e419ae49e7d7a4edab3458
     entity_id: switch.xmas_lights
+    domain: switch
+  - type: turn_on
+    device_id: 91daf010f807c3a44d72ee9cff1cc80b
+    entity_id: switch.xmas_tree
     domain: switch
   mode: single
 - id: '1607216364655'
@@ -51,24 +59,31 @@
     entity_id: light.small_lamp
     domain: light
   mode: single
-- id: '1607217218024'
-  alias: No motion on stairs turns off lights if late
+- id: '1607825394775'
+  alias: No living room motion turns lights off
   description: ''
   trigger:
   - type: no_motion
     platform: device
-    device_id: 70f43937f458d9d09fa8f17235cd17d1
-    entity_id: binary_sensor.hue_motion_sensor_1_motion
+    device_id: 361652f3b2369e4cdd6ba6b223801aec
+    entity_id: binary_sensor.hue_motion_sensor_2_motion
     domain: binary_sensor
     for:
       hours: 0
-      minutes: 10
+      minutes: 45
       seconds: 0
-  condition:
-  - condition: time
-    after: '23:59'
-    before: '6:00'
+  condition: []
   action:
-  - service: script.script_1
-    data: {}
+  - type: turn_off
+    device_id: d2b5408d1062516d36e34d9140e2216f
+    entity_id: light.hue_color_lamp_1
+    domain: light
+  - type: turn_off
+    device_id: 91daf010f807c3a44d72ee9cff1cc80b
+    entity_id: switch.xmas_tree
+    domain: switch
+  - type: turn_off
+    device_id: c17e000a44e419ae49e7d7a4edab3458
+    entity_id: switch.xmas_lights
+    domain: switch
   mode: single
