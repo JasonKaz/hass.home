@@ -43,3 +43,9 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+sensor:
+  - platform: command_line
+    name: gw1000_indoor_temp
+    command: "curl http://192.168.0.180:4545/query?query=gw1000_tempinf"
+    scan_interval: 15

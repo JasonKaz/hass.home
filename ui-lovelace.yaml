@@ -24,7 +24,15 @@ views:
           - entity: binary_sensor.hue_motion_sensor_1_motion
             name: Stairs Motion
           - entity: sensor.hue_motion_sensor_1_temperature
-            name: Staits Temp
+            name: Stairs Temp
+          - entity: binary_sensor.hue_motion_sensor_2_motion
+            name: Living Room Motion
+          - entity: sensor.hue_motion_sensor_2_temperature
+            name: Floor Temp
+          - entity: sensor.hue_motion_sensor_2_light_level
+            name: Brightness
+          - entity: sensor.gw1000_indoor_temp
+            name: Living Room Temp
       - title: Office
         type: entities
         entities:
