@@ -21,9 +21,9 @@
       minutes: 0
       seconds: 1
   condition:
-    condition: numeric_state
+  - condition: numeric_state
     entity_id: sensor.hue_motion_sensor_2_light_level
-    below: 70
+    below: 15
   action:
   - type: turn_on
     device_id: c17e000a44e419ae49e7d7a4edab3458

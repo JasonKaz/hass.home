@@ -1,0 +1,13 @@
+title: Plants
+views:
+  - title: Plant Hydration
+    path: plant-hydration
+    cards:
+      - type: iframe
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/8BbvtPRRz/ecowitt?orgId=1&refresh=30s&panelId=2
+      - type: iframe
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/8BbvtPRRz/ecowitt?orgId=1&refresh=30s&panelId=14
+      - type: iframe
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/8BbvtPRRz/ecowitt?orgId=1&refresh=30s&panelId=15
+      - type: iframe
+        url: http://home.jasonkaczmarsky.com:3000/d-solo/8BbvtPRRz/ecowitt?orgId=1&refresh=30s&panelId=16

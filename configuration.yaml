@@ -19,6 +19,11 @@ lovelace:
       show_in_sidebar: true
       mode: yaml
       filename: dashboards/stack-monitor.yaml
+    plant-hydration:
+      title: Plants
+      show_in_sidebar: true
+      mode: yaml
+      filename: dashboards/plant-hydration.yaml
 
 homeassistant:
   name: Home

@@ -19,8 +19,6 @@ views:
             icon: mdi:lamp
           - entity: switch.xmas_lights
             icon: mdi:string-lights
-          - entity: switch.xmas_tree
-            icon: mdi:pine-tree
           - entity: binary_sensor.hue_motion_sensor_1_motion
             name: Stairs Motion
           - entity: sensor.hue_motion_sensor_1_temperature
@@ -31,8 +29,6 @@ views:
             name: Floor Temp
           - entity: sensor.hue_motion_sensor_2_light_level
             name: Brightness
-          - entity: sensor.gw1000_indoor_temp
-            name: Living Room Temp
       - title: Office
         type: entities
         entities:
