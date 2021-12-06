@@ -23,7 +23,7 @@
   condition:
   - condition: numeric_state
     entity_id: sensor.hue_motion_sensor_2_light_level
-    below: 15
+    below: '15'
   action:
   - type: turn_on
     device_id: c17e000a44e419ae49e7d7a4edab3458
@@ -32,6 +32,10 @@
   - type: turn_on
     device_id: 91daf010f807c3a44d72ee9cff1cc80b
     entity_id: switch.xmas_tree
+    domain: switch
+  - type: turn_on
+    device_id: 6c1993995decdfdf36ac7bb2fdb2368f
+    entity_id: switch.xmas_tree_2
     domain: switch
   mode: single
 - id: '1607216364655'
@@ -51,9 +55,9 @@
     entity_id: switch.xmas_lights
     domain: switch
   - type: turn_off
-    device_id: 4a2cf561d7e039a3ddffa3514a3e2c2b
-    entity_id: light.white_lamp
-    domain: light
+    device_id: 6c1993995decdfdf36ac7bb2fdb2368f
+    entity_id: switch.xmas_tree_2
+    domain: switch
   - type: turn_off
     device_id: 707956b1edb51d3598cb333bed2ca308
     entity_id: light.small_lamp

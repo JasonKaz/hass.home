@@ -42,7 +42,8 @@ wemo:
   discovery: true
   static:
     - 192.168.0.173
-    - 192.168.0.241
+    - 192.168.0.60
+    - 192.168.0.73
 
 group: !include groups.yaml
 automation: !include automations.yaml

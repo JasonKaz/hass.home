@@ -12,21 +12,25 @@ views:
       - title: Living Room
         type: entities
         entities: 
-          - entity: light.white_lamp
-            icon: mdi:floor-lamp
           - entity: light.hue_color_lamp_1
-            name: Large Lamp
-            icon: mdi:lamp
+            name: White Lamp
+            icon: mdi:floor-lamp
           - entity: switch.xmas_lights
             icon: mdi:string-lights
-          - entity: binary_sensor.hue_motion_sensor_1_motion
-            name: Stairs Motion
+          - entity: switch.xmas_tree_2
+            name: Christmas Tree
+            icon: mdi:pine-tree
+          - entity: switch.xmas_tree
+            name: Stair Lights
+            icon: mdi:stairs
+          - entity: sensor.hue_motion_sensor_2_temperature
+            name: Floor Temp 
           - entity: sensor.hue_motion_sensor_1_temperature
             name: Stairs Temp
           - entity: binary_sensor.hue_motion_sensor_2_motion
             name: Living Room Motion
-          - entity: sensor.hue_motion_sensor_2_temperature
-            name: Floor Temp
+          - entity: binary_sensor.hue_motion_sensor_1_motion
+            name: Stairs Motion 
           - entity: sensor.hue_motion_sensor_2_light_level
             name: Brightness
       - title: Office
