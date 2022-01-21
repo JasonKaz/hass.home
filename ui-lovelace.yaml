@@ -16,10 +16,8 @@ views:
             name: White Lamp
             icon: mdi:floor-lamp
           - entity: switch.xmas_lights
+            name: Overhead Lights
             icon: mdi:string-lights
-          - entity: switch.xmas_tree_2
-            name: Christmas Tree
-            icon: mdi:pine-tree
           - entity: switch.xmas_tree
             name: Stair Lights
             icon: mdi:stairs
