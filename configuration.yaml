@@ -24,6 +24,7 @@ lovelace:
       show_in_sidebar: true
       mode: yaml
       filename: dashboards/plant-hydration.yaml
+      icon: mdi:sprout
 
 homeassistant:
   name: Home
