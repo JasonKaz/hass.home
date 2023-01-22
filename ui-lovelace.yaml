@@ -3,8 +3,6 @@ views:
   - title: Home
     path: home
     badges:
-      - entity: binary_sensor.updater
-      - entity: sun.sun
     cards:
       - type: weather-forecast
         entity: weather.home
@@ -18,7 +16,7 @@ views:
           - entity: switch.xmas_lights
             name: Overhead Lights
             icon: mdi:string-lights
-          - entity: switch.xmas_tree
+          - entity: switch.stair_lighta
             name: Stair Lights
             icon: mdi:stairs
           - entity: sensor.hue_motion_sensor_2_temperature
@@ -31,12 +29,16 @@ views:
             name: Stairs Motion 
           - entity: sensor.hue_motion_sensor_2_light_level
             name: Brightness
-      - title: Office
+          - name: Fix Soundbar
+            icon: mdi:restart
+            tap_action:
+              action: call-service
+              service: script.fix_soundbar
+            type: button
+          #- entity: switch.xmas_tree
+          #  name: Soundbar Power
+          #  icon: mdi:soundbar
+      - title: Jason's Bedroom
         type: entities
         entities:
           - light.small_lamp
-      - title: Actions
-        type: button
-        entity: script.script_1
-        name: Bedtime
-        icon: mdi:sleep

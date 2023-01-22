@@ -1,43 +1,3 @@
-- id: '1607216181505'
-  alias: Upstairs motion turns on lights
-  description: From the stairs OR the living room sensor
-  trigger:
-  - type: motion
-    platform: device
-    device_id: 70f43937f458d9d09fa8f17235cd17d1
-    entity_id: binary_sensor.hue_motion_sensor_1_motion
-    domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
-  - type: motion
-    platform: device
-    device_id: 361652f3b2369e4cdd6ba6b223801aec
-    entity_id: binary_sensor.hue_motion_sensor_2_motion
-    domain: binary_sensor
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 1
-  condition:
-  - condition: numeric_state
-    entity_id: sensor.hue_motion_sensor_2_light_level
-    below: '15'
-  action:
-  - type: turn_on
-    device_id: c17e000a44e419ae49e7d7a4edab3458
-    entity_id: switch.xmas_lights
-    domain: switch
-  - type: turn_on
-    device_id: 91daf010f807c3a44d72ee9cff1cc80b
-    entity_id: switch.xmas_tree
-    domain: switch
-  - type: turn_on
-    device_id: 6c1993995decdfdf36ac7bb2fdb2368f
-    entity_id: switch.xmas_tree_2
-    domain: switch
-  mode: single
 - id: '1607216364655'
   alias: Auto turn off all
   description: ''
@@ -88,6 +48,34 @@
     domain: switch
   - type: turn_off
     device_id: c17e000a44e419ae49e7d7a4edab3458
+    entity_id: switch.xmas_lights
+    domain: switch
+  mode: single
+- id: '1673494286948'
+  alias: Upstairs motion turn on lights
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: ffaf1c77aac750acf342bfc43cbee95b
+    entity_id: binary_sensor.hue_motion_sensor_1_motion
+    domain: binary_sensor
+  - type: motion
+    platform: device
+    device_id: 1b1c140b6b4a463d72870792b24cff96
+    entity_id: binary_sensor.hue_motion_sensor_2_motion
+    domain: binary_sensor
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.hue_motion_sensor_1_light_level
+    below: '15'
+  action:
+  - type: turn_on
+    device_id: 5e3d6a02de3b51fc8886476057177b9e
+    entity_id: switch.stair_lighta
+    domain: switch
+  - type: turn_on
+    device_id: fdd158316aba6f2bf5487c0c74b04341
     entity_id: switch.xmas_lights
     domain: switch
   mode: single

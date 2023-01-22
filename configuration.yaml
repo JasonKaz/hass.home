@@ -1,6 +1,6 @@
 frontend:
 shopping_list:
-updater:
+#updater:
 sun:
 history:
 logbook:
@@ -30,8 +30,12 @@ homeassistant:
   name: Home
   unit_system: imperial
   temperature_unit: F
+  country: US
+  currency: USD
   time_zone: !secret timezone
   internal_url: !secret internal_url
+  latitude: !secret latitude
+  longitude: !secret longitude
 
 #hue:
 #  bridges:
@@ -42,7 +46,7 @@ homeassistant:
 wemo:
   discovery: true
   static:
-    - 192.168.0.173
+    - 192.168.0.231
     - 192.168.0.60
     - 192.168.0.73
 
