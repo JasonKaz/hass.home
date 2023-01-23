@@ -69,7 +69,6 @@
   - condition: numeric_state
     entity_id: sensor.hue_motion_sensor_1_light_level
     below: 15
-    attribute: light_level
   action:
   - type: turn_on
     device_id: 5e3d6a02de3b51fc8886476057177b9e
