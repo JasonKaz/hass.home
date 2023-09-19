@@ -3,11 +3,15 @@ fix_soundbar:
   sequence:
   - type: turn_off
     device_id: 9a9e55a2982b1c25bd74c9f4d82634c9
-    entity_id: switch.xmas_tree
+    entity_id: e92c5af2adf922b462e146aea3bcb5c7
     domain: switch
-  - delay: '3'
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 3
+      milliseconds: 0
   - type: turn_on
     device_id: 9a9e55a2982b1c25bd74c9f4d82634c9
-    entity_id: switch.xmas_tree
+    entity_id: e92c5af2adf922b462e146aea3bcb5c7
     domain: switch
   mode: single

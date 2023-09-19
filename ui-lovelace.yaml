@@ -16,9 +16,6 @@ views:
           - entity: switch.xmas_lights
             name: Overhead Lights
             icon: mdi:string-lights
-          - entity: switch.stair_lighta
-            name: Stair Lights
-            icon: mdi:stairs
           - entity: sensor.hue_motion_sensor_2_temperature
             name: Floor Temp 
           - entity: sensor.hue_motion_sensor_1_temperature
