@@ -1,0 +1,14 @@
+prep_for_bed:
+  alias: Prep for bed
+  sequence:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 4
+      rgb_color:
+      - 255
+      - 128
+      - 0
+    target:
+      device_id: 38a2f0ed6dd80dc58723f873406010ce
+  description: Sets the color of the light to dark orange and lowers the brightness

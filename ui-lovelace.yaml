@@ -7,9 +7,25 @@ views:
       - type: weather-forecast
         entity: weather.home
         show_forecast: true
+      - title: Living Room
+        type: entities
+        entities:
+          - entity: switch.wemo_mini
+            name: Xmas Tree
+            icon: mdi:pine-tree
+          - entity: switch.xmas_tree_2
+            name: Xmas Lights
+            icon: mdi:string-lights
       - title: Bedroom
         type: entities
         entities:
           - entity: light.h60a1
             name: Ceiling Light
             icon: mdi:light-recessed
+          - type: button
+            name: Prep for bed
+            entity: script.prep_for_bed
+            icon: mdi:sleep
+            tap_action:
+              action: call-service
+              service: script.prep_for_bed
