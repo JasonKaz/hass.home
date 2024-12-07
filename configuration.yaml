@@ -7,25 +7,11 @@ history:
 logbook:
 config:
 system_health:
+bluetooth:
 zeroconf:
-        #speedtestdotnet:
-        #   scan_interval: '00:15'
 
 lovelace:
   mode: yaml
-  dashboards:
-    stack-monitoring:
-      title: Monitoring
-      icon: mdi:chart-bar-stacked
-      show_in_sidebar: true
-      mode: yaml
-      filename: dashboards/stack-monitor.yaml
-    plant-hydration:
-      title: Plants
-      show_in_sidebar: true
-      mode: yaml
-      filename: dashboards/plant-hydration.yaml
-      icon: mdi:sprout
 
 homeassistant:
   name: Home
@@ -38,26 +24,8 @@ homeassistant:
   latitude: !secret latitude
   longitude: !secret longitude
 
-#hue:
-#  bridges:
-#    - host: 192.168.0.197
-#      allow_unreachable: true
-#      allow_hue_groups: true
-
-wemo:
-  discovery: true
-  static:
-    - 192.168.0.231
-    - 192.168.0.60
-    - 192.168.0.73
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 
-sensor:
-  - platform: command_line
-    name: gw1000_indoor_temp
-    command: "curl http://192.168.0.180:4545/query?query=gw1000_tempinf"
-    scan_interval: 15

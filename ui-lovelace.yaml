@@ -7,35 +7,9 @@ views:
       - type: weather-forecast
         entity: weather.home
         show_forecast: true
-      - title: Living Room
-        type: entities
-        entities: 
-          - entity: light.hue_color_lamp_1
-            name: White Lamp
-            icon: mdi:floor-lamp
-          - entity: switch.xmas_lights
-            name: Overhead Lights
-            icon: mdi:string-lights
-          - entity: sensor.hue_motion_sensor_2_temperature
-            name: Floor Temp 
-          - entity: sensor.hue_motion_sensor_1_temperature
-            name: Stairs Temp
-          - entity: binary_sensor.hue_motion_sensor_2_motion
-            name: Living Room Motion
-          - entity: binary_sensor.hue_motion_sensor_1_motion
-            name: Stairs Motion 
-          - entity: sensor.hue_motion_sensor_2_light_level
-            name: Brightness
-          - name: Fix Soundbar
-            icon: mdi:restart
-            tap_action:
-              action: call-service
-              service: script.fix_soundbar
-            type: button
-          #- entity: switch.xmas_tree
-          #  name: Soundbar Power
-          #  icon: mdi:soundbar
-      - title: Jason's Bedroom
+      - title: Bedroom
         type: entities
         entities:
-          - light.small_lamp
+          - entity: light.h60a1
+            name: Ceiling Light
+            icon: mdi:light-recessed
