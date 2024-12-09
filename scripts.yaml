@@ -4,10 +4,10 @@ prep_for_bed:
   - action: light.turn_on
     metadata: {}
     data:
-      brightness_pct: 4
+      brightness_pct: 2
       rgb_color:
       - 255
-      - 128
+      - 75
       - 0
     target:
       device_id: 38a2f0ed6dd80dc58723f873406010ce
