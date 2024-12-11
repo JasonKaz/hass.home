@@ -29,3 +29,10 @@ views:
             tap_action:
               action: call-service
               service: script.prep_for_bed
+          - type: button
+            name: Daytime lights
+            icon: mdi:brightness-5
+            entity: script.bedroom_light_daytime_mode
+            tap_action:
+              action: call-service
+              service: script.bedroom_light_daytime_mode

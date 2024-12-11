@@ -12,3 +12,14 @@ prep_for_bed:
     target:
       device_id: 38a2f0ed6dd80dc58723f873406010ce
   description: Sets the color of the light to dark orange and lowers the brightness
+bedroom_light_daytime_mode:
+  alias: Bedroom light daytime mode
+  sequence:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 84
+      kelvin: 4644
+    target:
+      entity_id: light.h60a1
+  description: ''

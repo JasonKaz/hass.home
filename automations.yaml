@@ -33,3 +33,133 @@
     entity_id: b78bf48819a0ff2534e9f1aaccf09f11
     domain: switch
   mode: single
+- id: '1733806305173'
+  alias: Morning bed light - Step 1
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:15:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 75
+      - 0
+      brightness_pct: 2
+    target:
+      entity_id: light.h60a1
+  mode: single
+- id: '1733806656727'
+  alias: Morning bed light - Step 2
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:17:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 75
+      - 0
+      brightness_pct: 10
+    target:
+      entity_id: light.h60a1
+  mode: single
+- id: '1733806843553'
+  alias: Morning bed light - Step 3
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:19:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 75
+      - 0
+      brightness_pct: 20
+    target:
+      entity_id: light.h60a1
+  mode: single
+- id: '1733806866935'
+  alias: Morning bed light - Step 4
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:21:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 75
+      - 0
+      brightness_pct: 30
+    target:
+      entity_id: light.h60a1
+  mode: single
+- id: '1733806892281'
+  alias: Morning bed light - Step 5
+  description: ''
+  triggers:
+  - trigger: time
+    at: 07:23:00
+  conditions:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      rgb_color:
+      - 255
+      - 75
+      - 0
+      brightness_pct: 40
+    target:
+      entity_id: light.h60a1
+  mode: single
