@@ -24,11 +24,11 @@ homeassistant:
   latitude: !secret latitude
   longitude: !secret longitude
 
-wemo:
-  discovery: true
-  static:
-    - 192.168.0.42
-    - 192.168.0.43
+#wemo:
+#  discovery: true
+#  static:
+#    - 192.168.0.42
+#    - 192.168.0.43
 
 group: !include groups.yaml
 automation: !include automations.yaml
