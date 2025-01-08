@@ -23,3 +23,14 @@ bedroom_light_daytime_mode:
     target:
       entity_id: light.h60a1
   description: ''
+bedroom_light_evening_mode:
+  alias: Bedroom light evening mode
+  sequence:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 1
+      kelvin: 2357
+    target:
+      entity_id: light.h60a1
+  description: ''

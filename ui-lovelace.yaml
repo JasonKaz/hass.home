@@ -21,6 +21,13 @@ views:
               action: call-service
               service: script.prep_for_bed
           - type: button
+            name: Evening Lights
+            icon: mdi:weather-night
+            entity: script.bedroom_light_evening_mode
+            tap_action:
+              action: call-service
+              service: script.bedroom_light_evening_mode
+          - type: button
             name: Daytime lights
             icon: mdi:brightness-5
             entity: script.bedroom_light_daytime_mode
